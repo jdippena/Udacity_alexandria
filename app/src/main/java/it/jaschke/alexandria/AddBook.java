@@ -95,6 +95,7 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), BarcodeCaptureActivity.class);
+                intent.putExtra(BarcodeCaptureActivity.AutoFocus, true);
                 startActivityForResult(intent, RC_BARCODE_CAPTURE);
             }
         });
